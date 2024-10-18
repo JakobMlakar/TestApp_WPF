@@ -1,0 +1,29 @@
+﻿<Window x:Class="TestApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TestApp"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <DockPanel>
+        <Menu DockPanel.Dock="Top">
+            <MenuItem Header="Datoteka">
+                <MenuItem Header="Uvozi"></MenuItem>
+                <MenuItem Header="Izvozi"></MenuItem>
+                <MenuItem Header="Izhod"></MenuItem>
+            </MenuItem>
+            <MenuItem Header="Seznam">
+                <MenuItem Header="Dodaj"></MenuItem>
+                <MenuItem Header="Odstrani"></MenuItem>
+                <MenuItem Header="Uredi"></MenuItem>
+            </MenuItem>
+            <MenuItem Header="Orodja">
+                <MenuItem Header="Nastavitve"></MenuItem>
+            </MenuItem>
+        </Menu>
+        <StackPanel></StackPanel>
+        
+    </DockPanel>
+    
+</Window>

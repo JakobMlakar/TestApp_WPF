@@ -8,4 +8,26 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="ICONS\NEXT.png" />
+    <None Remove="ICONS\PLAY.png" />
+    <None Remove="ICONS\PREVIOUS.png" />
+    <None Remove="ICONS\RANDOM.png" />
+    <None Remove="ICONS\RANDOM_ON.png" />
+    <None Remove="ICONS\REPEAT.png" />
+    <None Remove="ICONS\REPEAT_ON.png" />
+    <None Remove="ICONS\STOP.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="ICONS\NEXT.png" />
+    <Resource Include="ICONS\PLAY.png" />
+    <Resource Include="ICONS\PREVIOUS.png" />
+    <Resource Include="ICONS\RANDOM.png" />
+    <Resource Include="ICONS\RANDOM_ON.png" />
+    <Resource Include="ICONS\REPEAT.png" />
+    <Resource Include="ICONS\REPEAT_ON.png" />
+    <Resource Include="ICONS\STOP.png" />
+  </ItemGroup>
+
 </Project>

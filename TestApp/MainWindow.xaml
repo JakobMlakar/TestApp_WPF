@@ -5,25 +5,73 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TestApp"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <DockPanel>
-        <Menu DockPanel.Dock="Top">
-            <MenuItem Header="Datoteka">
-                <MenuItem Header="Uvozi"></MenuItem>
-                <MenuItem Header="Izvozi"></MenuItem>
-                <MenuItem Header="Izhod"></MenuItem>
-            </MenuItem>
-            <MenuItem Header="Seznam">
-                <MenuItem Header="Dodaj"></MenuItem>
-                <MenuItem Header="Odstrani"></MenuItem>
-                <MenuItem Header="Uredi"></MenuItem>
-            </MenuItem>
-            <MenuItem Header="Orodja">
-                <MenuItem Header="Nastavitve"></MenuItem>
-            </MenuItem>
-        </Menu>
-        <StackPanel></StackPanel>
+        MinWidth="450"
+        MinHeight="350"
+        Title="JPlayer" Height="600" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <DockPanel Grid.Row="0" LastChildFill="True">
+            <Menu DockPanel.Dock="Top">
+                <MenuItem Header="Datoteka">
+                    <MenuItem Header="Uvozi"></MenuItem>
+                    <MenuItem Header="Izvozi"></MenuItem>
+                    <MenuItem Name="izhod" Header="Izhod" Click="meniKlik"></MenuItem>
+                </MenuItem>
+                <MenuItem Header="Seznam">
+                    <MenuItem Header="Dodaj"></MenuItem>
+                    <MenuItem Header="Odstrani"></MenuItem>
+                    <MenuItem Header="Uredi"></MenuItem>
+                </MenuItem>
+                <MenuItem Header="Orodja">
+                    <MenuItem Header="Nastavitve"></MenuItem>
+                </MenuItem>
+            </Menu>
+        </DockPanel>
+
+        <TextBox Grid.Row="1" BorderThickness="0" Text="Zdaj se predvaja: " IsReadOnly="True" HorizontalAlignment="Center"></TextBox>
         
-    </DockPanel>
-    
+        <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.2*"/>
+                <ColumnDefinition Width="0.8*"/>
+            </Grid.ColumnDefinitions>
+            <ListView Name="seznamPredvajanja">
+            </ListView>
+            <MediaElement Grid.Column="1" LoadedBehavior="Manual" UnloadedBehavior="Stop" />
+        </Grid>
+        
+        <Grid Grid.Row="3">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.2*"/>
+                <ColumnDefinition Width="0.8*"/>
+            </Grid.ColumnDefinitions>
+            <Label Grid.Column="0" Content="00:00:00" HorizontalAlignment="Center" VerticalAlignment="Center"></Label>
+            <Slider Grid.Column="1" VerticalAlignment="Center" Margin="10"></Slider>
+        </Grid>
+        <StackPanel  Grid.Row="4" Orientation="Horizontal" HorizontalAlignment="Center">
+            <Button Width="60" Height="60" Margin="20" BorderThickness="0" Background="White">
+                <Image Source="ICONS\REPEAT.png"/>
+            </Button>
+            <Button Width="60" Height="60" Margin="5" BorderThickness="0" Background="White">
+                <Image Source="ICONS\PREVIOUS.png"/>
+            </Button>
+            <Button Width="80" Height="80" Margin="5" BorderThickness="0" Background="White">
+                <Image Source="ICONS\PLAY.png"/>
+            </Button>
+            <Button Width="60" Height="60" Margin="5" BorderThickness="0" Background="White">
+                <Image Source="ICONS\NEXT.png"/>
+            </Button>
+            <Button Width="60" Height="60" Margin="20" BorderThickness="0" Background="White">
+                <Image Source="ICONS\RANDOM.png"/>
+            </Button>
+        </StackPanel>
+
+    </Grid>
 </Window>
